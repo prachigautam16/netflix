@@ -198,7 +198,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/DoesntMatterPrivateLimited/pk_netflix.git'
+                git branch: 'main', url: 'https://github.com/abhipraydhoble/netflix.git'
             }
         }
         stage("Sonarqube Analysis") {
@@ -288,7 +288,7 @@ pipeline{
         }
         stage('Checkout from Git'){
             steps{
-                git branch: 'main', url: 'https://github.com/DoesntMatterPrivateLimited/pk_netflix.git'
+                git branch: 'main', url: 'https://github.com/abhipraydhoble/netflix.git'
             }
         }
         stage("Sonarqube Analysis "){
@@ -327,20 +327,20 @@ pipeline{
                 script{
                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){   
                        sh "docker build --build-arg TMDB_V3_API_KEY=<yourapikey> -t netflix ."
-                       sh "docker tag netflix hackerboypk/netflix:latest "
-                       sh "docker push hackerboypk/netflix:latest "
+                       sh "docker tag netflix abhipraydhoble/netflix:latest "
+                       sh "docker push abhipraydhoble/netflix:latest "
                     }
                 }
             }
         }
         stage("TRIVY"){
             steps{
-                sh "trivy image hackerboypk/netflix:latest > trivyimage.txt" 
+                sh "trivy image abhipraydhoble/netflix:latest > trivyimage.txt" 
             }
         }
         stage('Deploy to container'){
             steps{
-                sh 'docker run -d --name netflix -p 8081:80 hackerboypk/netflix:latest'
+                sh 'docker run -d --name netflix -p 8081:80 abhipraydhoble/netflix:latest'
             }
         }
     }
