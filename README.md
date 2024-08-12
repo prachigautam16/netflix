@@ -52,19 +52,6 @@ TMDB API-KEY:
     newgrp docker
     sudo chmod 777 /var/run/docker.sock
     ```
-    
-- Build and run your application using Docker containers:
-    
-    ```bash
-    docker build -t netflix .
-    docker run -d --name netflix -p 8081:80 netflix:latest
-    
-    #to delete
-    docker stop <containerid>
-    docker rmi -f netflix
-    ```
-
-It will show an error cause you need API key
 
 **Step 4: Get the API Key:**
 
@@ -76,9 +63,11 @@ It will show an error cause you need API key
 - Provide the required basic details and click "Submit."
 - You will receive your TMDB API key.
 
-Now recreate the Docker image with your api key:
+Build and run your application using with your api key:
 ```
-docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
+docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix
+docker run -d --name netflix -p 8081:80 netflix:latest
+
 ```
 
 **Phase 2: Security**
