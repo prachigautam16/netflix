@@ -2,6 +2,7 @@ TMDB API-KEY:
 ````
 079c53c7a0369363ae29016c9c3b29f6
 9cbb1c218810ea9200b06c2fdda3bad0 :shiv
+squ_db12fcdf874ae5e92ae0d515e3b7d9221a362a3f : sonartoken
 ````
 
 <div align="center">
