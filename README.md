@@ -48,7 +48,8 @@ dcbb962f2e5980149bf0a562c396ff0b   gaurav-api token
     
     sudo apt-get update
     sudo apt-get install docker.io -y
-    sudo usermod -aG docker $USER  # Replace with your system's username, e.g., 'ubuntu'
+    sudo systemctl start docker
+    sudo usermod -aG docker ubuntu
     newgrp docker
     sudo chmod 777 /var/run/docker.sock
     ```
@@ -65,7 +66,7 @@ dcbb962f2e5980149bf0a562c396ff0b   gaurav-api token
 
 Build and run your application using with your api key:
 ```
-docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix
+docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
 docker run -d --name netflix -p 8081:80 netflix:latest
 
 ```
