@@ -37,7 +37,7 @@ dcbb962f2e5980149bf0a562c396ff0b
 - Clone your application's code repository onto the EC2 instance:
     
     ```bash
-    git clone https
+    git clone https://github.com/abhipraydhoble/netflix/tree/main
     ```
     
 
@@ -360,7 +360,7 @@ sudo systemctl restart jenkins
 
    Set up Prometheus and Grafana to monitor your application.
 
-   **Installing Prometheus:**
+   ### $${\color {Magenta} \textbf {Prometheus:}}$$
 
    First, create a dedicated Linux user for Prometheus and download Prometheus:
 
@@ -448,7 +448,7 @@ sudo systemctl restart jenkins
 
    `http://<your-server-ip>:9090`
 
-   **Installing Node Exporter:**
+   #### $${\color{Magenta} \textbf {Installing Node Exporter:}}$$
 
    Create a system user for Node Exporter and download Node Exporter:
 
@@ -552,7 +552,7 @@ sudo systemctl restart jenkins
    `http://<your-prometheus-ip>:9090/targets`
 
 
-#### Grafana
+### $${\color {Magenta} \textbf {Grafana}}$$
 
 **Install Grafana on Ubuntu 22.04 and Set it up to Work with Prometheus**
 
