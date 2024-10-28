@@ -1,6 +1,6 @@
 TMDB API-KEY: 
 ````
-dcbb962f2e5980149bf0a562c396ff0b   gaurav-api token
+dcbb962f2e5980149bf0a562c396ff0b 
 ````
 
 <div align="center">
@@ -21,9 +21,10 @@ dcbb962f2e5980149bf0a562c396ff0b   gaurav-api token
 
 
 
-# Deploy Netflix Clone on Cloud using Jenkins - DevSecOps Project!
+# $${\color{Blue} \textbf {Deploy Netflix Clone on Cloud using Jenkins - DevSecOps Project!}}$$
 
-### **Phase 1: Initial Setup and Deployment**
+
+## $${\color {red} \textbf {Phase 1: Initial Setup and Deployment}}$$
 
 **Step 1: Launch EC2 (Ubuntu 22.04):**
 
@@ -73,7 +74,7 @@ docker run -d --name netflix -p 8081:80 netflix:latest
 
 ```
 
-**Phase 2: Security**
+## $${\color {red} \textbf {Phase 2: Security}}$$
 
 1. **Install SonarQube and Trivy:**
     - Install SonarQube and Trivy on the EC2 instance to scan for vulnerabilities.
@@ -107,7 +108,7 @@ docker run -d --name netflix -p 8081:80 netflix:latest
     - Integrate SonarQube with your CI/CD pipeline.
     - Configure SonarQube to analyze code for quality and security issues.
 
-**Phase 3: CI/CD Setup**
+## $${\color {red} \textbf {Phase 3: CI/CD Setup}}$$
 
 1. **Install Jenkins for Automation:**
     - Install Jenkins on the EC2 instance to automate deployment:
@@ -353,7 +354,7 @@ sudo systemctl restart jenkins
 
 ```
 
-**Phase 4: Monitoring**
+### $${\color {red} \textbf {Phase 4: Monitoring}}$$
 
 1. **Install Prometheus and Grafana:**
 
@@ -551,7 +552,7 @@ sudo systemctl restart jenkins
    `http://<your-prometheus-ip>:9090/targets`
 
 
-####Grafana
+#### Grafana
 
 **Install Grafana on Ubuntu 22.04 and Set it up to Work with Prometheus**
 
@@ -667,12 +668,12 @@ That's it! You've successfully installed and set up Grafana to work with Prometh
     - Integrate Jenkins with Prometheus to monitor the CI/CD pipeline.
 
 
-**Phase 5: Notification**
+## $${\color {red} \textbf {Phase 5: Notification}}$$
 
 1. **Implement Notification Services:**
     - Set up email notifications in Jenkins or other notification mechanisms.
 
-# Phase 6: Kubernetes
+## $${\color {red} \textbf  {Phase 6: Kubernetes}}$$
 
 ## Create Kubernetes Cluster with Nodegroups
 
@@ -742,7 +743,18 @@ To deploy an application with ArgoCD, you can follow these steps, which I'll out
 4. **Access your Application**
    - To Access the app make sure port 30007 is open in your security group and then open a new tab paste your NodeIP:30007, your app should be running.
 
-**Phase 7: Cleanup**
+## $${\color {red} \textbf {Phase 7: Cleanup}}$$
 
-1. **Cleanup AWS EC2 Instances:**
+**Cleanup AWS EC2 Instances:**
     - Terminate AWS EC2 instances that are no longer needed.
+      
+### Note: Grafana dashboard codes:
+
+- Node Exporter Full: 1860
+- Prometheus 2.0 Stats: 11074
+- Grafana Overview: 10000
+- MySQL Overview: 7362
+- Kubernetes Cluster Monitoring: 6417
+- AWS CloudWatch: 2126
+- Elasticsearch Monitoring: 10011
+- Docker Monitoring: 12239
